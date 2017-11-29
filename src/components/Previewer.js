@@ -1,13 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Parser from 'marked';
+import 'github-markdown-css';
 
-class Previewer extends Component {
-
-  render() {
-    return (
-      <div>Hello I am Previewer</div>
-    );
+Parser.setOptions({
+  renderer: new Parser.Renderer(),
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: false,
+  smartLists: true,
+  smartypants: false,
+  highlight: function (code) {
+    return require('highlight.js').highlightAuto(code).value;
   }
+});
 
+const Previewer = (props) => {
+
+  return (
+    <div>
+      { Parser(props.preview) }
+    </div>
+  )
 }
 
 export default Previewer;
