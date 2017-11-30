@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   height: 50px;
@@ -22,11 +17,31 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+.Wrapper-container {
+  width: 100vw;
+  height: calc( 90vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.main-wrapper {
-  background: red;
+.Editor-container, .Preview-container {
+  width: calc( 50% - 2px);
+  height: 98%;
+  text-align: left;
+  padding: 1em;
+}
+
+.Vertical-separator {
+  height: calc(98% - 2em);
+  width: 2px;
+  background: #000;
+}
+
+.Editor-container textarea {
+  width: calc(100% - 2em);
+  max-width: calc(100% - 2em);
+  height: calc(100% - 2em);
+  padding: 1em;
 }

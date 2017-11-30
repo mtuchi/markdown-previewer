@@ -2,7 +2,11 @@ import React from 'react';
 
 const Editor = (props) => {
   return (
-    <textarea onChange={props.update}></textarea>
+    <div className="Editor-container">
+      <textarea placeholder="Write down your markdown syntax.."
+         onChange={props.update}>         
+      </textarea>
+    </div>
   )
 }
 

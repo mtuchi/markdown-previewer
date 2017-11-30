@@ -14,9 +14,9 @@ class Wrapper extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Wrapper-container">
         <Editor update={this.handleChange} />
-        <div className="vertical separator"></div>
+        <div className="Vertical-separator"></div>
         <Previewer preview={this.state.value} />
       </div>
     );
